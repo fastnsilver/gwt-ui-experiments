@@ -1,0 +1,142 @@
+GWT UI EXPERIMENTS
+====================
+A web application with intention of integrating and testing various GWT components and capabilities in addition
+to other third-party frameworks and components.  The intent this app is to explore and demonstrate specific functional use cases,
+including but not restricted to: hyperlink-based navigation, client and server side validation, bookmark-ability (history supprt), GWT RPC and REST
+requests, securing (not displaying) UI controls based on user role(s), and CRUS database interaction(s) while embracing modern, well-known development patterns.
+
+
+ABOUT THE APP
+--------------------
+Sample market user interface.  User interacts via tab and tree navigation to view/edit forms and grids of energy
+market related data. 
+
+Be sure to consult the individual READMEs in name.cphillipson.experimental
+
+    .gwt
+    .gwt.client
+    .gwt.shared
+    .gwt.server
+    
+for further details.
+
+
+REQUIREMENTS
+--------------------
+JDK 6 (1.6.0_27 or better)
+    http://www.oracle.com/technetwork/java/javase/downloads/index.html
+    
+Maven (2.2.1 or better)
+   http://maven.apache.org/ 
+   
+Google Web Toolkit (2.4)
+    http://code.google.com/webtoolkit/download.html
+    
+
+Set JAVA_HOME, MAVEN_HOME and MAVEN_OPTS environment variables
+
+Mvp4g 1.4.0 has not propagated to the Maven Public repositories since being released 2012-02-18.  
+You will most likely need to install it into your Maven local repository. 
+Get it here: http://code.google.com/p/mvp4g/downloads/detail?name=mvp4g-1.4.0.jar&can=2&q=
+See http://maven.apache.org/plugins/maven-install-plugin/examples/specific-local-repo.html for how to install.
+Match the <groupId>, <artifactId>, and <version> for the <dependency> in pom.xml.
+
+
+RECOMMENDATIONS
+--------------------
+If you're proficient with Eclipse, use the latest release of the SpringSource ToolSuite IDE (based on Eclipse).
+To download and install, go here:  http://www.springsource.com/downloads/sts.
+Then configure "Extensions" to download and install the Google Web Toolkit plugin.
+
+Make certain Maven reserves adequate RAM
+    MAVEN_OPTS=-Xms256m -Xmx2048m -XX:MaxPermSize=256m
+
+Add the following instruction within <pluginGroups></pluginGroups> of your settings.xml
+
+    <pluginGroup>org.mortbay.jetty</pluginGroup>
+
+
+TO BUILD
+--------------------
+
+To compile, test (includes unit and integration tests), and install all projects into your local .m2 repo, use
+
+    mvn clean install
+
+To compile and install without running tests, use
+
+    mvn clean install -DskipTests=true
+    
+
+TO GENERATE DOCUMENTATION
+--------------------
+
+To stage for local viewing, use
+
+    mvn -P documentation site:site site:stage
+    
+View the /target/staging directory for output.
+
+
+TO GENERATE DEPENDENCY GRAPH 
+--------------------
+
+    mvn -P graph graph:reactor -Dhide-scope=test -Dhide-optional=true
+
+The above command will generate an aggregate graph (in .png format) of all the dependencies of the projects in SPP MUI 's multi-module (a.k.a. reactor) build.
+It generates a file named reactor-graph.png in the /target directory.
+
+
+DEBUGGING AND/OR TROUBLESHOOTING
+--------------------
+To debug this app in GWT development mode
+
+    mvn gwt:debug
+    
+
+For more detail on other gwt-maven-plugin options, run
+    
+    mvn help:describe -DgroupId=org.codehaus.mojo -DartifactId=gwt-maven-plugin -Ddetails 
+
+
+DEPLOYING/RUNNING
+--------------------        
+To run this webapp, on
+
+    JETTY 8  (LOCALHOST)
+    
+    mvn jetty:run-war                    (to start the container)
+    press Ctrl+C                         (to stop the container)
+    
+    visit http://localhost:8080
+    
+
+    TOMCAT 6 (LOCALHOST)
+
+    mvn -P tomcat6x cargo:start          (to start the container)
+    press Ctrl+C                         (to stop the container)
+    
+    visit http://localhost:8081
+    logs to be found in /target/tomcat6x directory
+    
+    
+    JBOSS 5.1.2 (LOCALHOST)
+
+    mvn -P jboss51x cargo:start -Djboss51x.home=/path/to/jboss       (to start the container)
+    press Ctrl+C                                                     (to stop the container)
+        
+    /path/to/jboss is the directory where you've installed JBOSS 5.1 on your workstation/laptop
+    be sure to consult TFS SPP/Deployment/JBoss 5.1 configuration-steps.txt as an "out-of-box" installation will need some tweaking
+         
+    visit http://localhost:8081
+    logs to be found in /target/jboss51x directory
+    
+
+ROADMAP
+--------------------  
+
+* Fix bookmark-ability (history support)
+* Get client and server side validation working 
+* Add database -- bootstrap db schema from hibernate entities
+*** Persist data -- round-trip get/post/put/delete
+* Add security -- Spring Security, authentication and authorization of tabs, menu items and form/grid display/actions.
