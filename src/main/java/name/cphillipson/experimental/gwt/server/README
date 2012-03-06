@@ -1,0 +1,30 @@
+GWT Server
+
+The actual "deployable":
+
+                                        
+    b) gwt-ui-experiments       this is used for test purposes only, backed by an in-memory mock 
+                                datasource, and is a "proving ground" for new UI component development
+                                        
+                                        most data is constructed and retrieved from Stub* prefixed classes
+
+
+The server-side codebase is organized into the following directory structure:
+
+config                  Spring Java config.  All Spring beans are declared/integrated here. 
+
+dao                     Data access objects.  
+
+nav                     Navigation infrastructure.  Services and utilities for building data to be presented in hierarchical fashion.
+
+controller              Implementations of REST and GWT RPC Service controllers via Spring MVC
+    stub                    Stub implementations that take the place of real database-backed services
+
+
+Note:
+
+Async services (really these are service wrappers) should be registered in GwtConfig.
+
+All service interfaces and implementations are RPC based.
+For more information on GWT RPC, see: http://code.google.com/webtoolkit/doc/latest/tutorial/RPC.html
+

@@ -1,0 +1,131 @@
+/*******************************************************************************
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ *****************************************************************************/
+
+.gwt-TextArea, .gwt-SuggestBox.multivalue {
+    height: 42px;
+}
+
+.wideTextField {
+    width: 330px;     /* 155 + 20 + 155 */
+}
+
+/* Autocompleter */
+
+.suggestPopupContent table {
+    width: 327px;
+}
+
+.gwt-SuggestBoxPopup {
+    margin-left: 0px;
+    margin-top: -7px;
+}
+
+.gwt-SuggestBoxPopup .item {
+    background: white;
+    color: black;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 0px 8px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.gwt-SuggestBoxPopup .item-selected {
+    background-color: #7ca1c2;
+    color: white;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupContent {
+    border: thin solid #464646;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -moz-box-shadow: 0 2px 2px #C8C8C8;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTop, .gwt-SuggestBoxPopup .suggestPopupBottom, 
+.gwt-SuggestBoxPopup suggestPopupTopLeft, .gwt-SuggestBoxPopup .suggestPopupTopCenter, .gwt-SuggestBoxPopup .suggestPopupTopRight, 
+.gwt-SuggestBoxPopup .suggestPopupMiddleLeft, .gwt-SuggestBoxPopup .suggestPopupMiddleRight, 
+.gwt-SuggestBoxPopup .suggestPopupBottomLeft, .gwt-SuggestBoxPopup .suggestPopupBottomCenter, .gwt-SuggestBoxPopup .suggestPopupBottomRight,
+.gwt-SuggestBoxPopup .suggestPopupTopLeftInner, .gwt-SuggestBoxPopup .suggestPopupTopLeft {
+    display: none;
+}
+
+.autocompleterNext, .autocompleterPrev {
+    height: 14px;
+    margin-left: 85%;
+}
+
+.gwt-SuggestBoxPopup .autocompleterNext {
+    background: transparent url('vertical_nextprev.gif') no-repeat scroll 2px 2px;
+}
+
+.gwt-SuggestBoxPopup .autocompleterPrev {
+    background: transparent url('vertical_nextprev.gif') no-repeat scroll 2px -36px;
+}
+
+.gwt-SuggestBoxPopup .item-selected .autocompleterNext {
+    background: transparent url('vertical_nextprev.gif') no-repeat scroll -16px 1px;
+}
+
+.gwt-SuggestBoxPopup .item-selected .autocompleterPrev {
+    background: transparent url('vertical_nextprev.gif') no-repeat scroll -16px -36px;
+}
+
+/* to position the elements */
+.textarearow {
+    position: relative;
+    height: 56px;
+}
+
+.textfieldrow {
+    position: relative;
+    height: 28px;
+}
+
+div.rpt-formfeedback {
+	position: absolute;
+	left: 350px;
+	top: 0px;
+}
+/*
+   These styles are used for the form feedback labels
+ */
+
+div.rpt-formfeedback.error {
+    width: 16px;
+    height: 17px;
+    background: transparent url('status_icons16.gif') no-repeat scroll 0px 0px;
+}
+
+div.rpt-formfeedback.warning {
+    width: 16px;
+    height: 17px;
+    background: transparent url('status_icons16.gif') no-repeat scroll 0px -17px;
+}
+
+div.rpt-formfeedback.loading {
+    width: 16px;
+    height: 17px;
+    background: transparent url('loading_small.gif') no-repeat scroll;
+}
+
+div.rpt-formfeedback.valid {
+    width: 16px;
+    height: 17px;
+    background: transparent url('status_icons16.gif') no-repeat scroll 0px -34px;
+}

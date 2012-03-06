@@ -1,0 +1,15 @@
+GWT Shared
+
+Shared resources.  These may be used on both the client and server sides.
+
+The shared codebase is organized into the following directory structure:
+
+bean                These are for the most part, data-transfer objects.  They are agnostic of domain.
+                    That is to say they are fit for use with banner, top nav, tree nav, and grid rendering components.
+                    
+i18n                Localization constants and an extension of GWT's com.google.gwt.i18n.client.Messages interface.
+                    For more information on GWT's i18n support, see: http://code.google.com/webtoolkit/doc/latest/DevGuideI18n.html.
+                    
+util                A client-safe UUID generator.  For use with NavNode and NavOption serialization/deserialization.
+
+Note: all service end points should be defined in Endpoints interface 

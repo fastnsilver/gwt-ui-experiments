@@ -1,0 +1,15 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt="urn:import:com.google.gwt.user.client.ui">
+
+    <ui:with field="msg" type="name.cphillipson.experimental.gwt.shared.i18n.UiMessages" />
+	<ui:with field="res" type="name.cphillipson.experimental.gwt.client.resources.UiResources" />
+	
+    <gwt:DisclosurePanel>
+        <gwt:header><ui:text from="{msg.messages}"/></gwt:header>
+        <gwt:FlexTable ui:field="messagesTable" styleName="{res.style.messages}" width="100%" cellPadding="1" cellSpacing="0" />
+    </gwt:DisclosurePanel>
+    
+	
+
+</ui:UiBinder>

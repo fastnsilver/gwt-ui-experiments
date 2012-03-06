@@ -1,0 +1,118 @@
+GWT Client 
+
+The client-side codebase is organized into the following directory structure:
+
+
+Top level directory structure:
+
+module              package for all client modules
+
+resources           directory hosting all web resources (e.g., .css, .png, .jpg, .gif), and interfaces for GWT's ClientBundle, and GWTQuery's Selectors
+
+util                package for all client-side utilities
+
+EmktHome.java       the entry point for the GWT application
+
+
+
+Modules:             
+
+common              common client-side only beans, presenter interfaces, service interfaces and implementation, a JSR-303 validation factory,
+                    view interfaces and enums, and widget (i.e., custom GWT components) 
+
+energy              presenter and view interfaces and implementations related to the "energy" web service, grid component implementations, and GWT RPC interfaces 
+
+main                presenter and view interfaces and implementations related to layout, history management, event management via enum and Mvp4G event bus, place service, 
+                    Mvp4G module defintion, and GWT RPC service interfaces
+
+reserve             presenter and view interfaces and implementations related to the "reserve" web service, grid component implementations, and GWT RPC interfaces 
+
+
+
+Overview of development:
+
+0) Know which module you will be implementing within
+
+1) Define a new *View interface in the module's view package
+    a) typically the interface will extend TargetedView
+    b) the inner interface, i.e., the *Presenter interface will define an on* method that will be invoked from a * @Event annotated method in MainEventBus
+    
+    As an example look at IEnergyOfferEdit.  Notice that it extends TargetedView and its inner Presenter interface specifies an onEditEnergyOffer method.
+    The presenter's method will typically have a signature that works with a NavTarget.
+    
+    For a review of how MVP is supported in Mvp4G, see: http://code.google.com/p/mvp4g/wiki/PresenterViewService
+    
+2) Implement the View and Presenter interfaces
+    a) For the View, place the implementation in an impl package
+    b) A view is comprised of both Java and XML.  The XML is the declarative portion of the user-interface which is "bound" to the Java portion via GWT's UiBinder feature.
+    
+    Consult "Declarative Layout with UiBinder" for more details, here: http://code.google.com/webtoolkit/doc/latest/DevGuideUiBinder.html
+    
+    As an example look at EnergyOfferEdit.  Notice it extends ReverseCompositeView.  Injected member variables are package scoped.  These are
+    bound to the ui:field names in the corresponding *.ui.xml template.
+    
+    c) For the Presenter, you will typically client-side inject an RPC service *Async interface.
+    
+    Caution: injection is performed with @com.google.inject.Inject, not @javax.inject.Inject! 
+    
+    As an example look at EnergyOfferEditPresenter.  The NavTarget acts like a Map of key-value pairs.
+    It holds context, and is therefore used to provide criteria to the service.
+    
+    Note the use of SafeCallback.  Please use this abstract class in all *Presenter service invocations.
+    
+3) Specify an @Event annotated method in MainEventBus
+
+    For more detail on Mvp4G's event bus architecture, please consult: http://code.google.com/p/mvp4g/wiki/EventBus
+    
+    a) By convention the event method signature will be named the same as the presenter's method without the "on" prefix.
+    b) In most cases, you will just add a "place event"; i.e., an event responsible for taking you to a View that implements the TargetedView interface
+    
+4) Define an event in the Event enum.  In most cases, this will correspond to the action you are performing in the View.
+   The Javadoc is your friend.  Be sure to understand the relationships among Payload, Operation, DisplayMode and Event.
+   
+   Basically, you are providing "targeting" support for button based (onClick) actions. 
+
+5) Add a condition to the CommonTokenService.  This will allow menu options (an anchor's onClick) to be "targeted".
+
+   Read the following blog entry on "Hyperlink Navigation" to understand what's going on, here: http://mvp4g.blogspot.com/2011/07/hyperlink-navigation.html
+
+
+
+Grids:
+
+Grids are pretty common in this applcation
+
+Take a look at EnergyOfferGrid and ReserveOfferGrid for two decent examples on how to implement a single grid that supports
+dual mode display (i.e., read-only and read-write)
+
+
+
+Custom components (not an exhaustive list):
+
+The tree is backed by GWT's CellTree implementation
+    We currently provide a synchronous impl of GWT's TreeViewModel interface, see CustomTreeModel  
+
+We have "abstractions" that help with navigation
+    See Navigable, NavCommon, NavNode, NavOption and NavTarget
+    On the client-side we use NavigableUtil and NavTargetUtil to build a hierarchical tree and target each node's actions
+    
+We have components for rendering a grid
+    See ToggleableGrid and ReadOnlyGrid
+    
+We have components for rendering action-oriented buttons for use with a grid or form
+    See GridButtonBar, AbstractButtonBar, ActionBar and SubmitBar
+    You will most often use a GridButtonBar and impl concrete subclasses extending ToggleableGrid
+
+We have a component for rendering a "breadcrumb trail"
+    See BreadcrumbTrail
+    
+We have a component for rendering a suite of CSS tabs
+    See CustomTabBar
+    
+We have components for rendering a set of GWT Hyperlinks horizontally or vertically
+    See HorizontalLinkBar an VerticalLinkBar
+    
+Lastly, we have a component for rendering menu options
+    See NavNodeMenu
+ 
+    

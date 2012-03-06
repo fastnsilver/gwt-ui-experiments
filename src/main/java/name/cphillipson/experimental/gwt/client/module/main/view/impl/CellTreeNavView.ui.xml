@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+	xmlns:my="urn:import:name.cphillipson.experimental.gwt.client.module.common.widget.nav">
+
+    <ui:with field="res" type="name.cphillipson.experimental.gwt.client.resources.UiResources" />
+
+    <gwt:HTMLPanel styleName="{res.style.leftNavigation}">
+	   <my:NavPanel ui:field="navPanel" />
+    </gwt:HTMLPanel>
+
+</ui:UiBinder> 

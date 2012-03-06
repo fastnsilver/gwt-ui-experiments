@@ -1,0 +1,6 @@
+ATTENTION
+ -- Be sure to synch the contents of the build/wsdl directory with the one that exists in the spp-emkt-ws-api module.
+ 
+ -- Contents of the sample sub-directory contain examples of Spring bean config, particularly 
+    declaring Apache CXF web service infrastructure and implementations for deployment.  This directory is not packaged in
+    the resulting WAR.  It is up to the developer to create (and maintain) like configuration for use in deployable.

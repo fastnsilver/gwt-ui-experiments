@@ -1,0 +1,136 @@
+package name.cphillipson.experimental.gwt.shared.i18n;
+
+public interface I18NConstants {
+
+    // major elements
+    public static final String ALL = "all";
+    public static final String ALPHA = "alpha";
+    public static final String BID = "bid";
+    public static final String BIDS = "bids";
+    public static final String BINDING_LIMITS = "binding_limits";
+    public static final String BOTH = "both";
+    public static final String CLEARED = "cleared";
+    public static final String CLEARED_OFFER = "cleared_offer";
+    public static final String CLEARED_OFFERS = "cleared_offers";
+    public static final String COLD_STARTUP_COST = "cold_startup_cost";
+    public static final String COLD_STARTUP_TIME = "cold_startup_time";
+    public static final String COMMITMENT_STATUS = "commitment_status";
+    public static final String CONTINGENCY_RESERVE = "contingency_reserve";
+    public static final String CURRENT = "current";
+    public static final String DAY_AHEAD_MARKET = "day_ahead_market";
+    public static final String DAY_AHEAD_MARKET_SHORT_FORM = "day_ahead_market_short_form";
+    public static final String DEMAND_CURVE = "demand_curve";
+    public static final String DISPATCH_STATUS = "dispatch_status";
+    public static final String DISTRIBUTION_FACTORS = "distribution_factors";
+    public static final String ENERGY = "energy";
+    public static final String ENERGY_OFFER = "energy_offer";
+    public static final String ENERGY_OFFERS = "energy_offers";
+    public static final String ENERGY_QUALIFIED = "energy_qualified";
+    public static final String FIXED = "fixed";
+    public static final String GRIDS = "grids";
+    public static final String HOT_STARTUP_COST = "hot_startup_cost";
+    public static final String HOT_STARTUP_TIME = "hot_startup_time";
+    public static final String HOT_TO_COLD_TIME = "hot_to_cold_time";
+    public static final String HOT_TO_INTERMEDIATE_TIME = "hot_to_intermediate_time";
+    public static final String HOUR = "hour";
+    public static final String ID = "id";
+    public static final String INTERMEDIATE_STARTUP_COST = "intermediate_startup_cost";
+    public static final String INTERMEDIATE_STARTUP_TIME = "intermediate_startup_time";
+    public static final String LOCATION = "location";
+    public static final String LOCATIONS = "locations";
+    public static final String MAXIMUM_DAILY_ENERGY = "maximum_daily_energy";
+    public static final String MAXIMUM_DAILY_STARTS = "maximum_daily_starts";
+    public static final String MAXIMUM_ECONOMIC_LIMIT = "maximum_economic_limit";
+    public static final String MAXIMUM_EMERGENCY_LIMIT = "maximum_emergency_limit";
+    public static final String MAXIMUM_EMERGENCY_RUNTIME = "maximum_emergency_runtime";
+    public static final String MAXIMUM_REGULATION_LIMIT = "maximum_regulation_limit";
+    public static final String MAXIMUM_RUNTIME = "maximum_runtime";
+    public static final String MAXIMUM_WEEKLY_STARTS = "maximum_weekly_starts";
+    public static final String MESSAGES = "messages";
+    public static final String MINIMUM_ECONOMIC_LIMIT = "minimum_economic_limit";
+    public static final String MINIMUM_EMERGENCY_LIMIT = "minimum_emergency_limit";
+    public static final String MINIMUM_EMERGENCY_RUNTIME = "minimum_emergency_runtime";
+    public static final String MINIMUM_REGULATION_LIMIT = "minimum_regulation_limit";
+    public static final String MINIMUM_RUNTIME = "minimum_runtime";
+    public static final String MINIMUM_TO_OFF_TIME = "minimum_to_off_time";
+    public static final String MINMUM_DOWNTIME = "minmum_downtime";
+    public static final String MONITOR = "monitor";
+    public static final String MSQR_LIMIT = "msqr_limit";
+    public static final String MW_SUMMARY = "mw_summary";
+    public static final String NO = "no";
+    public static final String NO_LOAD_COST = "no_load_cost";
+    public static final String OBLIGATIONS = "obligations";
+    public static final String OFFER = "offer";
+    public static final String OFFERS = "offers";
+    public static final String OPERATING_DAY = "operating_day";
+    public static final String OUTAGE = "outage";
+    public static final String OVERRIDES = "overrides";
+    public static final String PARAMETERS = "parameters";
+    public static final String PERSPECTIVE = "perspective";
+    public static final String PRICE_SUMMARY = "price_summary";
+    public static final String PRIORITY = "priority";
+    public static final String PRODUCT_TYPE = "product_type";
+    public static final String QUERY = "query";
+    public static final String RAMP_RATE = "ramp_rate";
+    public static final String RAMP_RATE_DOWN = "ramp_rate_down";
+    public static final String RAMP_RATE_TYPE = "ramp_rate_type";
+    public static final String RAMP_RATE_UP = "ramp_rate_up";
+    public static final String REAL_TIME_BALANCING_MARKET = "real_time_balancing_market";
+    public static final String REAL_TIME_BALANCING_MARKET_SHORT_FORM = "real_time_balancing_market_short_form";
+    public static final String REGULATION = "regulation";
+    public static final String REGULATION_OFFER_DOWN = "regulation_offer_down";
+    public static final String REGULATION_OFFER_UP = "regulation_offer_up";
+    public static final String REGULATION_OFFERS = "regulation_offers";
+    public static final String REGULATION_QUALIFIED = "regulation_qualified";
+    public static final String RELIABILITY = "reliability";
+    public static final String REQUIREMENTS = "requirements";
+    public static final String RESERVE_ZONES = "reserve_zones";
+    public static final String RESOURCE = "resource";
+    public static final String RESOURCE_NAME = "resource_name";
+    public static final String RESOURCE_OFFER = "resource_offer";
+    public static final String RESOURCE_OFFERS = "resource_offers";
+    public static final String RESOURCES = "resources";
+    public static final String ROOT = "root";
+    public static final String SETTINGS = "settings";
+    public static final String SPINNING = "spinning";
+    public static final String SPINNING_OFFER = "spinning_offer";
+    public static final String SPINNING_QUALIFIED = "spinning_qualified";
+    public static final String SUPPLEMENTAL = "supplemental";
+    public static final String SUPPLEMENTAL_OFFER = "supplemental_offer";
+    public static final String SUPPLEMENTAL_QUALIFIED = "supplemental_qualified";
+    public static final String SYNCH_TO_MINIMUM_TIME = "synch_to_minimum_time";
+    public static final String TARR_LIMIT = "tarr_limit";
+    public static final String TEXT = "text";
+    public static final String TIMELINE_EVENTS = "timeline_events";
+    public static final String URL_MANAGER = "url_manager";
+    public static final String USE_SLOPE = "use_slope";
+    public static final String VERSION = "version";
+    public static final String VIOLATION_RELAXATION_LIMITS = "violation_relaxation_limits";
+    public static final String VIRTUAL_BID = "virtual_bid";
+    public static final String VIRTUAL_OFFER = "virtual_offer";
+    public static final String YES = "yes";
+
+
+    // operations
+    public static final String ADD = "add";
+    public static final String COPY = "copy";
+    public static final String DELETE = "delete";
+    public static final String EDIT = "edit";
+    public static final String DOWNLOAD = "download";
+    public static final String RESET = "reset";
+    public static final String SAVE = "submit";
+    public static final String UPLOAD = "upload";
+    public static final String VIEW = "view";
+
+
+    // navigation perspectives
+    public static final String ADMINISTRATION = "administration";
+    public static final String DEMAND = "demand";
+    public static final String MARKET = "market";
+    public static final String NOTIFICATIONS = "notifications";
+    public static final String RESERVE_ZONE = "reserve_zone";
+    public static final String SUPPLY = "supply";
+    public static final String TRANSACTION_LOG = "txlog";
+    public static final String VIRTUAL = "virtual";
+
+}

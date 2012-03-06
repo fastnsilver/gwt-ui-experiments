@@ -1,0 +1,25 @@
+Overview
+
+This is an instance of a Google Web Toolkit application.  Furthermore, it utilizes 
+MVP4G to expedite development of MVP constructs which are code-generated at compile time.
+
+Major technologies employed:
+
+GWT                     http://code.google.com/webtoolkit/
+GWT Maven Plugin        http://mojo.codehaus.org/gwt-maven-plugin/
+GWTQuery                http://code.google.com/p/gwtquery/
+MVP4G                   http://code.google.com/p/mvp4g/
+JSR-303 Validation      http://jcp.org/en/jsr/detail?id=303
+Hibernate Validator     http://www.hibernate.org/subprojects/validator.html
+Spring MVC              http://static.springsource.org/spring/docs/current/spring-framework-reference/html/mvc.html
+
+Be aware of the "basics" by reading here: http://code.google.com/webtoolkit/doc/latest/DevGuideCodingBasicsCompatibility.html
+
+For more information on MVP4G, see:
+
+MVP4G Wiki              http://code.google.com/p/mvp4g/wiki/HowtoIntegrateMvp4g?tm=6
+MVP4G Issues            http://code.google.com/p/mvp4g/issues/list
+MVP4G Google Group      http://groups.google.com/group/mvp4g  
+
+If you're using Eclipse for your IDE, be sure to enable annotation processing by following the directions, here:
+http://code.google.com/p/mvp4g/wiki/APT_130
