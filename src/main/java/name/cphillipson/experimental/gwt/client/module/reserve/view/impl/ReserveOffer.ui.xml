@@ -8,12 +8,20 @@
 	<ui:with field="res" type="name.cphillipson.experimental.gwt.client.resources.UiResources" />
 	<ui:with field="msg" type="name.cphillipson.experimental.gwt.shared.i18n.UiMessages" />
 
-    <gwt:FlowPanel width="100%">
-        <nav:BreadcrumbTrail ui:field="trail" />
-	    <gwt:ResizeLayoutPanel width="100%" height="600px" styleName="{res.style.gridWrapper}">
-	        <grid:ReserveOfferGrid ui:field="hourlyValues" width="30%" />
-	    </gwt:ResizeLayoutPanel>
-	    <bar:GridButtonBar ui:field="bar" />
-    </gwt:FlowPanel>
+     <gwt:DockLayoutPanel width="100%" height="100%" styleName="{res.style.container}" unit="PX">
+        <gwt:north size="40">
+            <gwt:HorizontalPanel width="100%">
+                <gwt:cell horizontalAlignment="ALIGN_LEFT">
+                    <nav:BreadcrumbTrail ui:field="trail" />
+                </gwt:cell>
+                <gwt:cell horizontalAlignment="ALIGN_RIGHT">
+                    <bar:GridButtonBar ui:field="bar" />
+                </gwt:cell>
+            </gwt:HorizontalPanel>
+        </gwt:north>
+        <gwt:center>
+            <grid:ReserveOfferGrid ui:field="hourlyValues" width="30%" styleName="{res.style.gridWrapper}"/>
+        </gwt:center>
+    </gwt:DockLayoutPanel>     
 
 </ui:UiBinder> 

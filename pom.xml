@@ -1631,7 +1631,7 @@
 
         <gwt.version>2.4.0</gwt.version> 
         <gwt.style>DETAILED</gwt.style>
-        <gwt.logLevel>DEBUG</gwt.logLevel>
+        <gwt.logLevel>INFO</gwt.logLevel>
         
         <mvp4g.version>1.4.0</mvp4g.version>
         <gin.version>1.5.0</gin.version>

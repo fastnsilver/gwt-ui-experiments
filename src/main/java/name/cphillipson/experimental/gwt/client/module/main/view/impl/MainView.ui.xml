@@ -6,8 +6,7 @@
 	<ui:with field="msg" type="name.cphillipson.experimental.gwt.shared.i18n.UiMessages" />
 
 
-	<gwt:DockLayoutPanel width="100%" height="100%"
-		styleName="{res.style.container}" unit="PX">
+	<gwt:DockLayoutPanel width="100%" height="100%" styleName="{res.style.container}" unit="PX">
 		<gwt:north size="70">
 			<gwt:FlowPanel width="100%" styleName="{res.style.topContainer}">
 				<gwt:Widget ui:field="banner" />

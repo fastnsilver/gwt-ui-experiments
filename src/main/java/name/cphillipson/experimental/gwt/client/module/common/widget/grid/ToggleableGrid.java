@@ -4,6 +4,10 @@ package name.cphillipson.experimental.gwt.client.module.common.widget.grid;
 import java.util.List;
 import java.util.Set;
 
+import name.cphillipson.experimental.gwt.client.module.common.view.DisplayMode;
+import name.cphillipson.experimental.gwt.shared.bean.TableMetadata;
+import name.cphillipson.experimental.gwt.shared.i18n.UiMessages;
+
 import com.google.gwt.cell.client.Cell;
 import com.google.gwt.cell.client.CompositeCell;
 import com.google.gwt.cell.client.HasCell;
@@ -19,16 +23,13 @@ import com.google.gwt.view.client.DefaultSelectionEventManager;
 import com.google.gwt.view.client.ListDataProvider;
 import com.google.gwt.view.client.MultiSelectionModel;
 import com.google.gwt.view.client.SelectionModel;
-import name.cphillipson.experimental.gwt.client.module.common.view.DisplayMode;
-import name.cphillipson.experimental.gwt.shared.bean.TableMetadata;
-import name.cphillipson.experimental.gwt.shared.i18n.UiMessages;
 
 /**
  * Base for dual display mode grid implementations based on GWT's <code>DataGrid</code>.
  * Concrete grids are instantiated in view mode and are responsible for rendering in either view or edit modes.
  * No paging support! Suitable for rendering tables of 250 cells or less.
  * 
- * @param <T> an @XmlType annotated class
+ * @param <T> a data transfer object
  * @author cphillipson
  *
  */
