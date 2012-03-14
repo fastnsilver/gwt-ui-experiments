@@ -9,7 +9,7 @@ requests, securing (not displaying) UI controls based on user role(s), and CRUS 
 ABOUT THE APP
 --------------------
 Sample market user interface.  User interacts via tab and tree navigation to view/edit forms and grids of energy
-market related data. 
+market related data.   Note: This application is very much a work in-progress!
 
 Be sure to consult the individual READMEs in name.cphillipson.experimental
 
@@ -21,12 +21,20 @@ Be sure to consult the individual READMEs in name.cphillipson.experimental
 for further details.
 
 
+DEMO
+--------------------
+A demo instance is deployed on Google App Engine, here: http://gwt-ui-experiments.appspot.com
+
+(As of 2012-03-13, data grids will not render.  Researching why this is so.  If you attempt to deploy this app
+yourself locally using one of the supported containers mentioned below, you will not run into this problem).
+ 
+
 REQUIREMENTS
 --------------------
 JDK 6 (1.6.0_27 or better)
     http://www.oracle.com/technetwork/java/javase/downloads/index.html
     
-Maven (2.2.1 or better)
+Maven (3.0.3 or better)
    http://maven.apache.org/ 
    
 Google Web Toolkit (2.4)
