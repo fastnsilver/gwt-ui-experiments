@@ -91,7 +91,7 @@ TO GENERATE DEPENDENCY GRAPH
 
     mvn -P graph graph:reactor -Dhide-scope=test -Dhide-optional=true
 
-The above command will generate an aggregate graph (in .png format) of all the dependencies of the projects in SPP MUI 's multi-module (a.k.a. reactor) build.
+The above command will generate an aggregate graph (in .png format) of all the dependencies.
 It generates a file named reactor-graph.png in the /target directory.
 
 
@@ -134,7 +134,18 @@ To run this webapp, on
     press Ctrl+C                                                     (to stop the container)
         
     /path/to/jboss is the directory where you've installed JBOSS 5.1 on your workstation/laptop
-    be sure to consult TFS SPP/Deployment/JBoss 5.1 configuration-steps.txt as an "out-of-box" installation will need some tweaking
+    
+    Note: installation will need some tweaking
+
+        1. Remove all hibernate* jars from commom/lib directory
+
+        2. Copy hibernate-core-3.6.10.Final.jar and hibernate-validator-4.2.0.Final.jar from the Maven repository 
+           to common/lib folder, see
+           http://forum.springsource.org/showthread.php?73879-Problem-with-Hibernate-Annotation-while-using-JBoss
+
+        3. Add a system property 'env=xxx' to properties.services file within 
+           <attribute name="Properties"></attribute>
+           where xxx is the name of a .properties file, e.g., exp or int.remote
          
     visit http://localhost:8081
     logs to be found in /target/jboss51x directory
@@ -143,7 +154,7 @@ To run this webapp, on
 ROADMAP
 --------------------  
 
-* Fix bookmark-ability (history support)
+* Fix "bookmark-ability" (a.k.a. history support)
 * Get client and server side validation working 
 * Add database -- bootstrap db schema from hibernate entities
 *** Persist data -- round-trip get/post/put/delete
