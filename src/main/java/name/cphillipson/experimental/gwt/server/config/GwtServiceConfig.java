@@ -1,13 +1,13 @@
 package name.cphillipson.experimental.gwt.server.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import name.cphillipson.experimental.gwt.server.controller.MarketService;
 import name.cphillipson.experimental.gwt.server.controller.stub.StubMarketService;
 import name.cphillipson.experimental.gwt.server.dao.TestData;
 import name.cphillipson.experimental.gwt.server.nav.NavigationFactory;
 import name.cphillipson.experimental.gwt.server.nav.stub.StubNavigationFactory;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class GwtServiceConfig {
@@ -22,7 +22,6 @@ public class GwtServiceConfig {
         return new StubNavigationFactory();
     }
 
-    // Services that are not meant to be here but rather in the spp-emkt-services or spp-emkt-auth projects
 
     @Bean
     public MarketService marketService() {
