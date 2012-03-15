@@ -21,7 +21,7 @@
 					</gwt:ScrollPanel>
 				</gwt:west>
 				<gwt:center>
-			        <gwt:SimplePanel ui:field="content" styleName="{res.style.content}" />
+			        <gwt:LayoutPanel ui:field="content" styleName="{res.style.content}" />
 				</gwt:center>
 			</gwt:SplitLayoutPanel>
 		</gwt:center>

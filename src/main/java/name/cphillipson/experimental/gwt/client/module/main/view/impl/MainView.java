@@ -9,7 +9,7 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiTemplate;
 import com.google.gwt.user.client.ui.IsWidget;
-import com.google.gwt.user.client.ui.SimplePanel;
+import com.google.gwt.user.client.ui.LayoutPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
 
@@ -23,7 +23,7 @@ public class MainView extends ReverseCompositeView<IMainPresenter> implements IM
     Widget banner, topNav, leftNav;
 
     @UiField
-    SimplePanel content;
+    LayoutPanel content;
 
 
     @Inject
@@ -36,7 +36,7 @@ public class MainView extends ReverseCompositeView<IMainPresenter> implements IM
 
     @Override
     public void setContent(IsWidget content) {
-        this.content.setWidget(content);
+        this.content.add(content);
     }
 
 }
