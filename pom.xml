@@ -54,7 +54,7 @@
 	</pluginRepositories>
 
 	<repositories>
-		<!-- JBoss.org repository -->
+		<!-- JBoss.org repo -->
 		<repository>
 			<id>jboss.releases</id>
 			<name>JBoss releases</name>
@@ -66,7 +66,7 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
-        <!-- For developing against stable releases of Spring framework -->
+        <!-- Spring framework repo -->
         <repository>
 			<id>org.springframework.maven.release</id>
 			<name>Spring Maven Release Repository</name>
@@ -74,16 +74,22 @@
 			<releases><enabled>true</enabled></releases>
 			<snapshots><enabled>false</enabled></snapshots>
         </repository>
-        <!-- Repository for gquery plugins -->
+        <!-- GQuery repo -->
         <repository>
             <id>gwtquery-plugins</id>
             <url>http://gwtquery-plugins.googlecode.com/svn/mavenrepo</url>
         </repository>
+		<!-- GAE repo -->
         <repository>
 	        <id>maven-gae-plugin-repo</id>
 	        <name>maven-gae-plugin repository</name>
 	        <url>http://maven-gae-plugin.googlecode.com/svn/repository</url>
 	    </repository>
+		<!-- Mvp4G repo -->
+        <repository>
+            <id>mvp4g</id>
+            <url>http://mvp4g.googlecode.com/svn/maven2/releases</url>
+        </repository>
 	</repositories>
 	
     

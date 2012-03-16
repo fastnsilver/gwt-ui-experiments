@@ -43,12 +43,6 @@ Google Web Toolkit (2.4)
 
 Set JAVA_HOME, MAVEN_HOME and MAVEN_OPTS environment variables
 
-Mvp4g 1.4.0 has not propagated to the Maven Public repositories since being released 2012-02-18.  
-You will most likely need to install it into your Maven local repository. 
-Get it here: http://code.google.com/p/mvp4g/downloads/detail?name=mvp4g-1.4.0.jar&can=2&q=
-See http://maven.apache.org/plugins/maven-install-plugin/examples/specific-local-repo.html for how to install.
-Match the <groupId>, <artifactId>, and <version> for the <dependency> in pom.xml.
-
 
 RECOMMENDATIONS
 --------------------
@@ -154,8 +148,8 @@ To run this webapp, on
 ROADMAP
 --------------------  
 
-* Fix "bookmark-ability" (a.k.a. history support)
+* Fix "bookmark-ability" (a.k.a. History support)
 * Get client and server side validation working 
-* Add database -- bootstrap db schema from hibernate entities
+* Add database -- bootstrap db schema (e.g., from Hibernate entities)
 *** Persist data -- round-trip get/post/put/delete
-* Add security -- Spring Security, authentication and authorization of tabs, menu items and form/grid display/actions.
+* Add security -- Spring Security, authentication and authorization of tabs, menu items, buttons and form/grid display/actions.
