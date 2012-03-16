@@ -24,9 +24,6 @@ for further details.
 DEMO
 --------------------
 A demo instance is deployed on Google App Engine, here: http://gwt-ui-experiments.appspot.com
-
-(As of 2012-03-13, data grids will not render.  Researching why this is so.  If you attempt to deploy this app
-yourself locally using one of the supported containers mentioned below, you will not run into this problem).
  
 
 REQUIREMENTS
