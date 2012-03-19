@@ -1,11 +1,11 @@
 package name.cphillipson.experimental.gwt.server.config;
 
+import name.cphillipson.experimental.gwt.server.controller.CPM;
+
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
-
-import name.cphillipson.experimental.gwt.server.controller.CPM;
 
 /**
  * Configuration for this application: @Components such as @Services, @Repositories, and @Controllers.
@@ -22,7 +22,7 @@ public class ComponentConfig {
      */
     @Configuration
     @Profile("standard")
-    @PropertySource(value = { "classpath:/${env:exp}.properties" })
+    @PropertySource(value = { "classpath:/exp.properties" })
     static class Standard {
     }
 }
